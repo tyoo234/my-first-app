@@ -2,7 +2,7 @@ import React from "react";
 import { navLink } from "../data/dummy";
 import logo from "../asset/logo.svg";
 import { Link } from "react-scroll";
-import { IoIosMenu } from "react-icons/io";
+import { IoIosMenu, IoMdClose } from "react-icons/io";
 
 const Navbar = () => {
       return (
@@ -29,6 +29,23 @@ const Navbar = () => {
                               Sign In
                         </button>
                               <IoIosMenu className="text-2xl blok md:hidden"/>
+                  </div>
+                  <div>
+                  <IoMdClose />
+                  <ul className="flex md:hidden absolute top-0 right-0 w-full h-screen bg-white">
+                        <li className="flex gap-x-4">
+                              {navLink.map((item) => {
+                                    return (
+                                    <Link to={item.id} 
+                                                key={item.id} 
+                                                className="hover:text-orange text-sm md:text-md">
+                                                {item.name}
+                                    </Link>
+                              );
+                              })
+                              }
+                        </li>
+                  </ul>
                   </div>
             </div>
       );
