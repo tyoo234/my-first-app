@@ -30,15 +30,15 @@ const Navbar = () => {
                         </button>
                               <IoIosMenu className="text-2xl blok md:hidden"/>
                   </div>
-                  <div>
+                  <div className="flex flex-col gap-4 pt-5 px-5 md:hidden absolute top-0 right-sm">
                   <IoMdClose />
-                  <ul className="flex md:hidden absolute top-0 right-0 w-full h-screen bg-white">
-                        <li className="flex gap-x-4">
+                  <ul className="">
+                        <li className="flex gap-y-4 flex-col">
                               {navLink.map((item) => {
                                     return (
                                     <Link to={item.id} 
                                                 key={item.id} 
-                                                className="hover:text-orange text-sm md:text-md">
+                                                className="hover:text-orange text-sm md:text-md border-b">
                                                 {item.name}
                                     </Link>
                               );
