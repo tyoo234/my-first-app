@@ -34,10 +34,14 @@ const Navbar = () => {
                               onClick={() => setNav((prev) => !prev)} />
                   </div>
                   <div
-                        className={`${ nav ? "right-0" : "-right-[100%]"} flex flex-col gap-4 pt-5 px-5 md:hidden absolute top-0 w-full h-screen bg-white`}>
+                        className={`${ 
+                              nav ? "right-0" : "-right-[98%]"
+                        } flex flex-col gap-4 pt-5 px-5 md:hidden absolute top-0 w-full h-screen bg-white`}>
+
                         <IoMdClose 
                               className="cursor-pointer text-2xl" 
-                              onClick={() => setNav((prev) => !prev)} />
+                              onClick={() => setNav((prev) => !prev)} 
+                        />
                         <ul className="">
                               <li className="flex gap-y-4 flex-col">
                                     {navLink.map((item) => {
