@@ -48,7 +48,7 @@ const Navbar = () => {
                                           return (
                                                 <Link to={item.id}
                                                       key={item.id}
-                                                      className="hover:text-orange text-sm md:text-md border-b cursor-pointer">
+                                                      className="hover:text-orange text-sm md:text-md border-b cursor-pointer py-2">
                                                       {item.name}
                                                 </Link>
                                           );
