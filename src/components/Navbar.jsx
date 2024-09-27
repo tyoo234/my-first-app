@@ -3,7 +3,6 @@ import { navLink } from "../data/dummy";
 import logo from "../asset/logo.svg";
 import { Link } from "react-scroll";
 import { IoIosMenu, IoMdClose } from "react-icons/io";
-import { PiFileRsThin } from "react-icons/pi";
 
 const Navbar = () => {
       const [nav, setNav] = useState(false);
