@@ -1,11 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { navLink } from "../data/dummy";
 import logo from "../asset/logo.svg";
 import { Link } from "react-scroll";
 import { IoIosMenu, IoMdClose } from "react-icons/io";
+import { PiFileRsThin } from "react-icons/pi";
 
 const Navbar = () => {
       const [nav, setNav] = useState(false);
+      const [scroll, setScroll] = useState(false);
+      useEffect(() => {
+   
+      },          [third])
+
       return (
             <div className="flex justify-between items-center px-5 lg:px-[72px] h-[80px] w-full fixed top-0">
                   <div className="w-[103px] h-[25px]">
