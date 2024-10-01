@@ -8,7 +8,13 @@ const Navbar = () => {
       const [nav, setNav] = useState(false);
       const [scroll, setScroll] = useState(false);
       useEffect(() => {
-   
+            const handScroll = ()=>{
+                  if(window.scrollY > 0){
+                        setScroll(true);
+                  }else{
+                        setScroll(false);
+                  }
+            }
       },          [third])
 
       return (
