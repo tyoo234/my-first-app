@@ -8,14 +8,15 @@ const Navbar = () => {
       const [nav, setNav] = useState(false);
       const [scroll, setScroll] = useState(false);
       useEffect(() => {
-            const handScroll = ()=>{
+            const handScroll = () => {
                   if(window.scrollY > 0){
                         setScroll(true);
                   }else{
                         setScroll(false);
                   }
-            }
-      },          [third])
+            };
+            window.addEventListener('scroll', handScroll);
+      },          []);
 
       return (
             <div className="flex justify-between items-center px-5 lg:px-[72px] h-[80px] w-full fixed top-0">
