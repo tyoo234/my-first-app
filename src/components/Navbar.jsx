@@ -8,18 +8,19 @@ const Navbar = () => {
       const [nav, setNav] = useState(false);
       const [scroll, setScroll] = useState(false);
       useEffect(() => {
-            const handScroll = () => {
-                  if(window.scrollY > 0){
+            const handleScroll = () => {
+                  if (window.scrollY > 0) {
                         setScroll(true);
-                  }else{
+                  } else {
                         setScroll(false);
                   }
             };
-            window.addEventListener('scroll', handScroll);
-      },          []);
+            window.addEventListener('scroll', handleScroll);
+            return () => window.removeEventListener("scroll", handleScroll);
+      }, []);
 
       return (
-            <div className="flex justify-between items-center px-5 lg:px-[72px] h-[80px] w-full fixed top-0">
+            <div className={'${scroll ? "-top-20"  : "top"} flex justify-between items-center px-5 lg:px-[72px] h-[80px] w-full fixed '}>
                   <div className="w-[103px] h-[25px]">
                         <img src={logo} alt="" className="w-full h-full object-contain" />
                   </div>
@@ -46,13 +47,12 @@ const Navbar = () => {
                               onClick={() => setNav((prev) => !prev)} />
                   </div>
                   <div
-                        className={`${ 
-                              nav ? "right-0" : "-right-[98%]"
-                        } flex flex-col gap-4 pt-5 px-5 md:hidden absolute top-0 w-full h-screen bg-white`}>
+                        className={`${nav ? "right-0" : "-right-[98%]"
+                              } flex flex-col gap-4 pt-5 px-5 md:hidden absolute top-0 w-full h-screen bg-white`}>
 
-                        <IoMdClose 
-                              className="cursor-pointer text-2xl" 
-                              onClick={() => setNav((prev) => !prev)} 
+                        <IoMdClose
+                              className="cursor-pointer text-2xl"
+                              onClick={() => setNav((prev) => !prev)}
                         />
                         <ul className="">
                               <li className="flex gap-y-4 flex-col">
