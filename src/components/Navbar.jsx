@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { navLink } from "../data/dummy";
 import logo from "../asset/logo.svg";
 import { Link } from "react-scroll";
-import { IoIosMenu, IoMdClose } from "react-icons/io";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 
 const Navbar = () => {
       const [nav, setNav] = useState(false);
@@ -42,7 +42,7 @@ const Navbar = () => {
                         <button className="px-6 lg:px-8 py-2 bg-white outline-none hover:bg-orange hover:text-white rounded-full">
                               Sign In
                         </button>
-                        <IoIosMenu
+                        <AiOutlineMenu
                               className="text-2xl block md:hidden"
                               onClick={() => setNav((prev) => !prev)} />
                   </div>
@@ -50,7 +50,7 @@ const Navbar = () => {
                         className={`${nav ? "right-0" : "-right-[98%]"
                               } flex flex-col gap-4 pt-5 px-5 md:hidden absolute top-0 w-full h-screen bg-white`}>
 
-                        <IoMdClose
+                        <AiOutlineClose
                               className="cursor-pointer text-2xl"
                               onClick={() => setNav((prev) => !prev)}
                         />
