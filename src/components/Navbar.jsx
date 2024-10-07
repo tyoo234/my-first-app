@@ -20,7 +20,7 @@ const Navbar = () => {
       }, []);
 
       return (
-            <div className={'${scroll ? "-top-20"  : "top"} flex justify-between items-center px-5 lg:px-[72px] h-[80px] w-full fixed '}>
+            <div className={`${scroll ? "-top-20"  : "top-0"} flex justify-between items-center px-5 lg:px-[72px] h-[80px] w-full fixed `}>
                   <div className="w-[103px] h-[25px]">
                         <img src={logo} alt="" className="w-full h-full object-contain" />
                   </div>
